@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+group 'pybukkit'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots'
+    }
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+
+    implementation 'org.python:jython-standalone:2.7.1'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
